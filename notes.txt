@@ -1,0 +1,19 @@
+We use an update() to iterate through all the Entities, and update their
+states.
+
+We use a draw() to iterate through all the Entities and draw them on screen.
+
+function GameEngine() {
+  this.entities=[];
+  this.ctx = null;
+  this.lastUpdateTimestamp = null,
+  this.deltaTime = null;
+};
+
+GameEngine.prototype.draw = function(callback) {
+  //loop through all entities, call draw()
+}
+
+GameEngine.prototype.update = function() {
+  //loop through all entities, call update();
+};

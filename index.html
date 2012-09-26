@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<!--http://jsfiddle.net/ScF6c/5/-->
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="srv/kinetic-v3.8.3.js">  </script>
+<!--        <script type="text/javascript" src="srv/hexlib.js">          </script>
+        <script type="text/javascript" src="srv/perspective.js">     </script>
+        <script type="text/javascript" src="srv/perspective.js">     </script>
+        -->
+        <script type="text/javascript">
+          var socket = io.connect('http://localhost');
+          socket.on('connect', function(){
+            console.log('socket connected');
+          }
+          socket.on('message', function(msg){
+            console.log(msg);
+          };
+        </script>
+
+<!--        <style> #location {position:absolute; left:600px; top:100px;}
+                #HexData {position:absolute; left:600px; top:200px}
+              </style> -->
+    </head>
+    <body>
+        <div id="kstage">
+            <!-- we'll put a 600px by 600px canvas here -->
+        </div>
+        <div id="location">
+            <h1 id="docy">foo</h1>
+            <h1 id="docz">bar</h1>
+        </div>
+        <div id="HexData">
+            <h1>This node:</h1>
+            <textarea id="info" readonly="readonly" 
+                style="font: 14px monospace; margin:auto;" 
+                rows="3" columns="20">default</textarea>
+            <br>
+            <button type="button" id="saveHexData">Save</button>
+        </div>
+    </body>
+</html>

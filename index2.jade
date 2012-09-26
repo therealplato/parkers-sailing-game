@@ -1,0 +1,20 @@
+!!!
+html
+  head
+    block head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/sitewide.css')
+      link(rel="stylesheet", href="/stylesheets/admin/index.css" )
+      script(type="text/javascript", src="/js/admin.js")
+  body
+    p
+      a(href="/admin") Cuizini Admin Interface
+    #container
+      #controls
+        ul
+          li
+            a(href="/admin/users") Manage Users
+          li
+            a(href="/admin/rests") Manage Restaurants
+      #dashboard
+        block dashboard
